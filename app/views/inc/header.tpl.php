@@ -14,8 +14,8 @@
         <header id="header">
             <h2>Pokédex</h2>
             <nav>
-                <a href="#" class="container__nav">Liste</a>
-                <a href="#" class="container__nav">Types</a>
+                <a href="liste" class="container__nav">Liste</a>
+                <a href="types" class="container__nav">Types</a>
             </nav>
         </header>
         <main id="main">
