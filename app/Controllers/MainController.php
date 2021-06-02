@@ -12,6 +12,16 @@ class MainController {
         $this->show('detail');
     }
 
+    //function to show the list page
+    public function list() {
+        $this->show('list');
+    }
+
+    //function to show the types page
+    public function types() {
+        $this->show('types');
+    }
+
     // function to show the views
     private function show($viewName, $viewVars=[]) {
         // templates header and footer and page which is in parameter

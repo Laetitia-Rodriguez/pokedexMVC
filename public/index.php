@@ -28,6 +28,20 @@ $router->map(
     "method" => "detail"],
     'main-detail'
 );
+$router->map(
+    'GET', 
+    '/liste', 
+    ["controller" => "MainController",
+    "method" => "list"],
+    'main-list'
+);
+$router->map(
+    'GET', 
+    '/types', 
+    ["controller" => "MainController",
+    "method" => "types"],
+    'main-types'
+);
 
 $match = $router->match();
 
