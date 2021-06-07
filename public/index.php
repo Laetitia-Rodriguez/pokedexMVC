@@ -23,7 +23,7 @@ $router->map(
 );
 $router->map(
     'GET', 
-    '/detail/[i:id]', 
+    '/detail/[i:numero]', 
     ["controller" => "MainController",
     "method" => "detail"],
     'main-detail'
