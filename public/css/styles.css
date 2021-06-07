@@ -2,6 +2,7 @@ body {
     background-color: #C14040;  
     font-family: 'Bree Serif', serif;
     margin: 1em;
+    box-sizing: border-box;
 }
 
 #header {
@@ -26,9 +27,15 @@ nav a {
     font-size: 0.8em;
 }
 
-#main {
+#list {
     display: flex;
     flex-wrap: wrap;
+    padding: 0px;
+}
+
+.link {
+    text-decoration: none;
+    color: #EFE3E3;
 }
 
 .card {
@@ -37,7 +44,7 @@ nav a {
     border-radius: 20px;
     background-color: #982C2C;
     text-align: center;
-    margin: 0.5em;
+    margin: 0.4em;
     list-style-type: none;
 }
 

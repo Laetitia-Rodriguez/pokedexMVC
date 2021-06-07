@@ -4,9 +4,9 @@
 $pokemons = $viewVars['pokemons'];
 ?>
 
-<ul>
+<ul id="list">
     <?php foreach ($pokemons as $pokemon) :?>
-        <a href="<?= $baseUrl . '/detail/' . $pokemon['numero'] ?>">
+        <a class="link" href="<?= $baseUrl . '/detail/' . $pokemon['numero'] ?>">
             <li class="card">
                 <img class="card__image" src="<?= "img/" . $pokemon['numero'] . '.png' ?>" alt="">
                 <div>
