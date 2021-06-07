@@ -10,7 +10,7 @@ require __DIR__.'/../app/Controllers/MainController.php';
 // Altorouter is a composer dependency for router
 $router = new AltoRouter();
 
-// Basepath with BASE_URI is determined in .htaccess
+// Basepath
 $router->setBasePath($_SERVER['BASE_URI']);
 
 // Routes
