@@ -13,8 +13,9 @@ class MainController {
     }
 
     //function to show details pages
-    public function detail() {
-        $this->show('detail');
+    public function detail($numero) {
+        $pokemon = Detail::find($numero);
+        $this->show('detail', ['pokemon' => $pokemon]);
     }
 
     //function to show the list page
@@ -31,7 +32,7 @@ class MainController {
     private function show($viewName, $viewVars=[]) {
         // Fixed part of the URL
         // BASE_URI is determined in .htaccess
-        // We can use $baseUrl in all the views
+        // We can now use $baseUrl in all the views
         $baseUrl = $_SERVER['BASE_URI'];
         // templates header and footer and page which is in parameter
         include(__DIR__.'/../views/inc/header.tpl.php');

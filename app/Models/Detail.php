@@ -209,4 +209,21 @@ class Detail extends CoreModel {
         return $pokemons;
 
     }
+
+    public static function find($pokemon) {
+
+        $sql = "SELECT * FROM pokemon WHERE numero = ? ";
+
+        // Connexion to the BDD via PDO et function getPDO from CoreModel
+        $pdo = self::getPDO();
+
+        $pdoStatement = $pdo->prepare($sql);
+
+        $pdoStatement->execute(array($pokemon['numero']));
+
+        $pokemon =$pdoStatement->fetch(PDO::FETCH_ASSOC);
+
+        return $pokemon;
+
+    }
 }

@@ -55,3 +55,12 @@ nav a {
 p {
     color: #EFE3E3;
 }
+
+.statistic {
+    list-style-type: none;
+    color:red;
+}
+
+.detail {
+    color:red;
+}
