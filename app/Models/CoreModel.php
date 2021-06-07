@@ -1,5 +1,9 @@
 <?php
 
+namespace Pokedex\Models;
+
+use \PDO;
+
 class CoreModel {
    
     static $dsn = 'mysql:dbname=Pokedex;host=localhost;charset=utf8';
@@ -9,7 +13,7 @@ class CoreModel {
     /*
     ** Method to connect at the BDD via PDO
     */
-    function getPDO () {
+    static public function getPDO () {
 
         static $dsn = 'mysql:dbname=Pokedex;host=localhost;charset=utf8';
         static $user= 'explorateur';

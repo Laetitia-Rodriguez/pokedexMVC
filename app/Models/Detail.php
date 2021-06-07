@@ -1,6 +1,8 @@
 <?php
 
-class Detail {
+namespace Pokedex\Models;
+
+class Detail extends CoreModel {
     private $id;
     private $nom;
     private $pv;
@@ -189,5 +191,15 @@ class Detail {
         $this->numero = $numero;
 
         return $this;
+    }
+
+    public function findAll() {
+
+        $sql = "SELECT * FROM pokemon ORDER BY numero";
+
+        $pdo = getPDO();
+
+
+
     }
 }
