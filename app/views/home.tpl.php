@@ -1,6 +1,19 @@
+<?php
+
+// MainController, $pokemons
+$pokemons = $viewVars['pokemons'];
+?>
+
 <ul>
-    <li class="card">
-        <img src="img/1.png" alt="portrait de Bulbizarre" class="card__image">
-        <p>#id Bulbizarre</p>
-    </li>
+    <?php foreach ($pokemons as $pokemon) :?>
+        <li class="card">
+            <img class="card__image" src="<?= "img/" . $pokemon['numero'] . '.png' ?>" alt="">
+            <div>
+                <span>
+                    #<?= $pokemon['numero'] ?>
+                </span>
+                <?= $pokemon['nom'] ?>
+            </div>
+        </li>
+    <?php endforeach ?>
 </ul>

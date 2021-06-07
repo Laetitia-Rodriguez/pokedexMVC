@@ -1,10 +1,15 @@
 <?php 
 
+namespace Pokedex\Controllers;
+
+use Pokedex\Models\Detail;
+
 class MainController {
 
     // function to show the homepage
     public function home() {
-        $this->show('home');
+        $pokemons = Detail::findAll();
+        $this->show('home', ['pokemons' => $pokemons]);
     }
 
     //function to show details pages

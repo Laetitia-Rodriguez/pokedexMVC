@@ -47,7 +47,7 @@ $match = $router->match();
 
 if ($match) {
     $methodToCall = $match ["target"]["method"];
-    $controllerToCall = $match ["target"]["controller"];
+    $controllerToCall = 'Pokedex\Controllers\\' . $match ["target"]["controller"];
     $controller = new $controllerToCall($router);
     $controller->$methodToCall ( $match['params'] );
 }

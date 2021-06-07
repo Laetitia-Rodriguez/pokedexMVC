@@ -38,6 +38,7 @@ nav a {
     background-color: #982C2C;
     text-align: center;
     margin: 0.5em;
+    list-style-type: none;
 }
 
 .card__image {

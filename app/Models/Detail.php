@@ -2,6 +2,8 @@
 
 namespace Pokedex\Models;
 
+use \PDO;
+
 class Detail extends CoreModel {
     private $id;
     private $nom;
@@ -193,13 +195,18 @@ class Detail extends CoreModel {
         return $this;
     }
 
-    public function findAll() {
+    public static function findAll() {
 
         $sql = "SELECT * FROM pokemon ORDER BY numero";
 
-        $pdo = getPDO();
+        // Connexion to the BDD via PDO et function getPDO from CoreModel
+        $pdo = self::getPDO();
 
+        $pdoStatement = $pdo->query($sql);
 
+        $pokemons =$pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $pokemons;
 
     }
 }
