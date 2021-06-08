@@ -3,8 +3,12 @@
 // Composer dependencies
 require __DIR__.'/../vendor/autoload.php';
 
+$baseURL = $_SERVER['BASE_URI'];
+
+
 // Controllers
 require __DIR__.'/../app/Controllers/MainController.php';
+
 
 
 // Altorouter is a composer dependency for router
