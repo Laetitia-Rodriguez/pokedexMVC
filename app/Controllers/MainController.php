@@ -3,6 +3,7 @@
 namespace Pokedex\Controllers;
 
 use Pokedex\Models\Detail;
+use Pokedex\Models\Type;
 
 class MainController {
 
@@ -26,7 +27,8 @@ class MainController {
 
     //function to show the types page
     public function types() {
-        $this->show('types');
+        $types = Type::findAllType();
+        $this->show('types', ['types' => $types]);
     }
 
     // function to show the views

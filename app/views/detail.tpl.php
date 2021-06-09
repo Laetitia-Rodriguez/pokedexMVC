@@ -10,7 +10,7 @@ $types = $viewVars['types'];
     <img class="detail__image" src="<?= $baseUrl . '/img/' . $pokemon['numero'] . '.png' ?>" alt="">
     <div class="detail__description">
         <h3>#<?= $pokemon['numero'], ' ' . $pokemon['nom'] ?></h3>
-        <div class="types">
+        <div class="detail__description__types">
             <ul>
                 <?php foreach ($types as $type) :?>
                     <li class="type" style="background:#<?= $type['color'] ?>"><?= $type['name'] ?></li>

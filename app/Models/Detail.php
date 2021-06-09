@@ -195,6 +195,7 @@ class Detail extends CoreModel {
         return $this;
     }
 
+    // Function to get all the pokemons
     public static function findAll() {
 
         $sql = "SELECT * FROM pokemon ORDER BY numero";
@@ -210,6 +211,8 @@ class Detail extends CoreModel {
 
     }
 
+
+    // Function to get a pokemon by "numero"
     public static function find($pokemon) {
 
         $sql = "SELECT * FROM pokemon WHERE numero = ?";

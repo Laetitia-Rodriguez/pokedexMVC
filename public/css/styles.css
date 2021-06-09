@@ -52,12 +52,18 @@ nav a {
     width:200px;
 }
 
-p {
-    color: #EFE3E3;
-}
-
 main {
     text-align:center;
+}
+
+main p {
+    color: #EFE3E3;
+    font-size: 0.8em;
+    text-align: left;
+}
+
+main a {
+    color: #EFE3E3;
 }
 
 .main__title {
@@ -87,14 +93,12 @@ main {
     font-size: 1.2em;
 }
 
-.types {
-    
-}
 
-.types ul {
+.detail__description__types ul {
     display:flex;
     flex-direction:row;
     list-style-type: none;
+    padding-inline-start: 0px;
 }
 
 .type {
@@ -136,9 +140,58 @@ main {
 
 
 
-a {
+.list a {
     margin-top:1em;
     color:#EFE3E3;
     font-size: 0.8em;
     display: inline-block;
+}
+
+.types {
+}
+
+
+.types ul {
+    list-style-type: none;
+    font-size: 0.8em; 
+    display: grid;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+    padding-inline-start: 0px;
+}
+
+.types ul li {
+    
+   
+    padding: 1em;
+    
+    border-radius: 4px;
+}
+
+.types ul li a {
+    text-decoration: none;
+    color:#EFE3E3;
+}
+
+@media screen and (min-width : 350px) {
+
+    .types ul {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+
+@media screen and (min-width : 500px) {
+
+    .types ul {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
+
+
+@media screen and (min-width : 1024px) {
+
+    .types ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+    }
 }
