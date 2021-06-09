@@ -3,7 +3,6 @@ body {
     font-family: 'Bree Serif', serif;
     margin: 1em;
     box-sizing: border-box;
-    color:red;
 }
 
 #header {
@@ -57,11 +56,89 @@ p {
     color: #EFE3E3;
 }
 
-.statistic {
-    list-style-type: none;
-    color:red;
+main {
+    text-align:center;
+}
+
+.main__title {
+    color:#EFE3E3;
+    text-align: center;
+    font-size: 1.6em;
 }
 
 .detail {
-    color:red;
+    display:flex;
+}
+
+.detail__image {
+    width:300px;
+    margin-right: 1em;;
+}
+
+.detail__description {
+    background-color: #982C2C;
+    color:#EFE3E3;
+    padding: 0.5em;
+    border-radius: 7px;
+    text-align: left;
+}
+
+.detail__description h3 {
+    font-size: 1.2em;
+}
+
+.types {
+    
+}
+
+.types ul {
+    display:flex;
+    flex-direction:row;
+    list-style-type: none;
+}
+
+.type {
+    border-radius:3px;
+    font-size: 0.8em;
+    padding:0.5em;
+    margin-right: 0.5em;
+}
+
+.statistic {
+    display:flex;
+    font-size: 0.8em;
+    padding:0px;
+}
+
+.statistic__column1 {
+    flex:2;
+    margin-bottom: 0.5em;
+}
+
+.statistic__column2 {
+    flex:1;
+    margin-bottom: 0.5em;
+}
+
+.statistic__column3 {
+    flex:4;
+    border-radius: 4px;
+    background: rgb(88, 28, 28);
+    overflow:hidden;
+    width:255px;
+    margin-bottom: 0.5em;
+}
+
+.statistic__column3__value {
+    height: 100%;
+    background:#EFE3E3;
+} 
+
+
+
+a {
+    margin-top:1em;
+    color:#EFE3E3;
+    font-size: 0.8em;
+    display: inline-block;
 }

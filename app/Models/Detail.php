@@ -212,7 +212,7 @@ class Detail extends CoreModel {
 
     public static function find($pokemon) {
 
-        $sql = "SELECT * FROM pokemon WHERE numero = ? ";
+        $sql = "SELECT * FROM pokemon WHERE numero = ?";
 
         // Connexion to the BDD via PDO et function getPDO from CoreModel
         $pdo = self::getPDO();
@@ -224,6 +224,29 @@ class Detail extends CoreModel {
         $pokemon =$pdoStatement->fetch(PDO::FETCH_ASSOC);
 
         return $pokemon;
+
+    }
+
+    // Function to get the name and color's type for one pokemon
+    // with the junction table "pokemon_type"
+    public static function getType($pokemon) {
+
+        $sql = "SELECT 
+        `type`.* 
+        FROM `pokemon_type`
+        INNER JOIN `type` ON type.id = pokemon_type.type_id
+        WHERE pokemon_type.pokemon_numero = ?";
+
+        // Connexion to the BDD via PDO et function getPDO from CoreModel
+        $pdo = self::getPDO();
+
+        $pdoStatement = $pdo->prepare($sql);
+
+        $pdoStatement->execute(array($pokemon['numero']));
+
+        $types = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $types;
 
     }
 }

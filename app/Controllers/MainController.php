@@ -15,7 +15,8 @@ class MainController {
     //function to show details pages
     public function detail($numero) {
         $pokemon = Detail::find($numero);
-        $this->show('detail', ['pokemon' => $pokemon]);
+        $types = Detail::getType($pokemon);
+        $this->show('detail', ['pokemon' => $pokemon, 'types' => $types]);
     }
 
     //function to show the list page
