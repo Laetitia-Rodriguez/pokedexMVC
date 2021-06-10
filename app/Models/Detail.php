@@ -237,7 +237,7 @@ class Detail extends CoreModel {
         $sql = "SELECT 
         `type`.* 
         FROM `pokemon_type`
-        INNER JOIN `type` ON type.id = pokemon_type.type_id
+        INNER JOIN `type` ON `type`.`id` = `type_id`
         WHERE pokemon_type.pokemon_numero = ?";
 
         // Connexion to the BDD via PDO et function getPDO from CoreModel

@@ -14,15 +14,10 @@ class MainController {
     }
 
     //function to show details pages
-    public function detail($numero) {
-        $pokemon = Detail::find($numero);
+    public function detail($pokemon) {
+        $pokemon = Detail::find($pokemon);
         $types = Detail::getType($pokemon);
         $this->show('detail', ['pokemon' => $pokemon, 'types' => $types]);
-    }
-
-    //function to show the list page
-    public function list() {
-        $this->show('list');
     }
 
     //function to show the types page
@@ -30,6 +25,19 @@ class MainController {
         $types = Type::findAllType();
         $this->show('types', ['types' => $types]);
     }
+
+    //function to show a particular type page
+    public function type($types) {
+        $pokemons = Type::findAllByType($types);
+        $this->show('type', ['pokemons' => $pokemons]);
+    }
+
+    /*
+    //function to show the list page
+    public function list() {
+        $this->show('list');
+    } */
+
 
     // function to show the views
     private function show($viewName, $viewVars=[]) {

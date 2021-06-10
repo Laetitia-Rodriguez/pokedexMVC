@@ -46,6 +46,13 @@ $router->map(
     "method" => "types"],
     'main-types'
 );
+$router->map(
+    'GET', 
+    '/type/[i:id]', 
+    ["controller" => "MainController",
+    "method" => "type"],
+    'main-type'
+);
 
 $match = $router->match();
 

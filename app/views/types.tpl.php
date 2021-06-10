@@ -7,9 +7,11 @@ $types = $viewVars['types'];
 <div class="types">
     <ul>
         <?php foreach($types as $type) : ?>
-            <li style="background:#<?= $type['color'] ?>">
-                <a href="<?= $baseUrl . '/type/' . $type['id']  ?>"><?= $type['name'] ?></a>
-            </li>
+            <a href="<?= $baseUrl . '/type/' . $type['id']  ?>">
+                <li style="background:#<?= $type['color'] ?>">
+                    <?= $type['name'] ?>
+                </li>
+            </a> 
         <?php endforeach ?>
     </ul>
 </div>

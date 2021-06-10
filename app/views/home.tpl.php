@@ -1,6 +1,6 @@
 <?php
 
-// MainController, $pokemons
+// MainController, $viewVars
 $pokemons = $viewVars['pokemons'];
 ?>
 

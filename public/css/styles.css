@@ -160,7 +160,7 @@ main a {
     padding-inline-start: 0px;
 }
 
-.types ul li {
+.types ul a li {
     
    
     padding: 1em;
@@ -168,7 +168,7 @@ main a {
     border-radius: 4px;
 }
 
-.types ul li a {
+.types ul a {
     text-decoration: none;
     color:#EFE3E3;
 }

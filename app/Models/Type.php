@@ -84,4 +84,28 @@ class Type extends CoreModel
 
         return $types;
     }
+
+    // Function to get all the pokemons with a specific type
+    public static function findAllByType($types)
+    {
+        $sql = "SELECT 
+        `pokemon`.*
+        FROM `pokemon_type`
+        INNER JOIN `pokemon` ON `pokemon`.`numero` = `pokemon_numero`
+        WHERE `pokemon_type`.`type_id` = ?
+        ORDER BY `type_id";
+
+        // Connexion to the BDD via PDO et function getPDO from CoreModel
+        $pdo = self::getPDO();
+
+        $pdoStatement = $pdo->prepare($sql);
+
+        $pdoStatement->execute(array($types['id']));
+
+        $pokemons = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $pokemons;
+    }
+
+
 }
