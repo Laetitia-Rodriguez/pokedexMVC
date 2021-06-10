@@ -158,6 +158,10 @@ View detail.tpl.php
     background:#EFE3E3;
 } 
 
+#return {
+    text-decoration: none;
+}
+
 /*
 View types.tpl.php
 */ 

@@ -62,5 +62,5 @@ $types = $viewVars['types'];
         </div>
     </div>
 </div>
-<a>Revenir à la liste</a>
+<a id="return" href="<?= $baseUrl . '/' ?>">Revenir à la liste</a>
 

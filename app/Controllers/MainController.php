@@ -32,13 +32,6 @@ class MainController {
         $this->show('type', ['pokemons' => $pokemons]);
     }
 
-    /*
-    //function to show the list page
-    public function list() {
-        $this->show('list');
-    } */
-
-
     // function to show the views
     private function show($viewName, $viewVars=[]) {
         // Fixed part of the URL

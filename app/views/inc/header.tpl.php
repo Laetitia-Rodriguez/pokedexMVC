@@ -15,7 +15,7 @@
         <header id="header">
             <h2>Pokédex</h2>
             <nav>
-                <a href="<?= $baseUrl . '/liste' ?>" class="container__nav">Liste</a>
+                <a href="<?= $baseUrl . '/' ?>" class="container__nav">Liste</a>
                 <a href="<?= $baseUrl . '/types' ?>" class="container__nav">Types</a>
             </nav>
         </header>

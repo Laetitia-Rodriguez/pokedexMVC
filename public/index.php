@@ -18,6 +18,8 @@ $router = new AltoRouter();
 $router->setBasePath($_SERVER['BASE_URI']);
 
 // Routes
+
+// Template for the homepage with the entire pokemon's list
 $router->map(
     'GET', 
     '/', 
@@ -25,6 +27,8 @@ $router->map(
     "method" => "home"],
     'main-home'
 );
+
+// Template for a single pokemon
 $router->map(
     'GET', 
     '/detail/[i:numero]', 
@@ -32,13 +36,8 @@ $router->map(
     "method" => "detail"],
     'main-detail'
 );
-$router->map(
-    'GET', 
-    '/liste', 
-    ["controller" => "MainController",
-    "method" => "list"],
-    'main-list'
-);
+
+// Template for a page with the types list
 $router->map(
     'GET', 
     '/types', 
@@ -46,6 +45,9 @@ $router->map(
     "method" => "types"],
     'main-types'
 );
+
+// Template for a filtered list by type
+// We get it when we choose a type on precedent template
 $router->map(
     'GET', 
     '/type/[i:id]', 
